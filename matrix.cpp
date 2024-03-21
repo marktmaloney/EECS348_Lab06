@@ -120,8 +120,17 @@ int main() {
     subtractMatrices(result, matrixA, matrixB, size);
     std:: cout << "Matrix Difference (A - B):" << std::endl;
     printMatrix(result, size);
-    updateMatrixElement(matrixA, size, 1, 1, 18);
-    std::cout << "Matrix A after updating element (1,1) with value 18:" << std::endl;
+    int row;
+    int col;
+    int number;
+    std::cout << "Enter row of new number:";
+    std::cin >> row;
+    std::cout << "Enter column of new number:";
+    std::cin >> col;
+    std::cout << "Enter new number:";
+    std::cin >> number;
+    updateMatrixElement(matrixA, size, row, col, number);
+    std::cout << "Matrix A after updating element ("<< row << "," << col << ") with value " << number << ":" << std::endl;
     printMatrix(matrixA, size);
 
     int maxVal = getMaxValue(matrixA, size);
